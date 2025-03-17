@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Logout from '../../components/logout';
 import axiosInstance from '../../axiosInstance';
 
-const defaultProfilePicture = '../../assets/default.png';
-
 const Profile = ({ onClose }) => {
   const [user, setUser] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
@@ -47,8 +45,6 @@ const Profile = ({ onClose }) => {
   if (!user) {
     return <div>Loading...</div>; 
   }
-
-  const profilePictureUrl = user.profilePicture || defaultProfilePicture;
 
   const formatAddress = (address) => {
     if (!address) return 'Address not available';
@@ -106,7 +102,7 @@ const Profile = ({ onClose }) => {
           </div>
           <div className="w-full flex justify-center mt-2">
             <img
-              src={profilePictureUrl}
+              src={user.profilePicture}
               alt="Profile"
               className="w-32 h-32 rounded-full border-2 border-black object-cover"
             />

@@ -108,7 +108,7 @@ const ItemDetails = ({ item, onClose }) => {
         </div>
         <div className="m-2 p-1">
           <img
-            src={`http://localhost:5000/uploads/${image}`}
+            src={image}
             alt={name}
             className="w-full h-56 object-cover rounded-md"
           />
