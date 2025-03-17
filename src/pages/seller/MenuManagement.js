@@ -218,7 +218,7 @@ const MenuItemManager = () => {
                       <td className='border-2 border-gray-600 p-2 text-center'>
                         {menuItem.image && (
                           <img
-                            src={`http://localhost:5000/uploads/${menuItem.image}`}
+                            src={menuItem.image}
                             alt={menuItem.name}
                             className='w-12 h-12 object-cover rounded-md mx-auto'
                           />

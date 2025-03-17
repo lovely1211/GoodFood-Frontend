@@ -402,7 +402,7 @@ const Menu = () => {
                  ref={(el) => (itemRefs.current[product._id] = el)}
                >
                  <img
-                   src={`http://localhost:5000/uploads/${product.image}`}
+                   src={product.image}
                    alt={product.name}
                    className="rounded-md w-full h-64 object-cover relative"
                    onClick={() => recordView(product._id)}

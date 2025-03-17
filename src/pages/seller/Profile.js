@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from 'react';
 import Logout from '../../components/logout';
-const defaultProfilePicture = '../../assets/default.png';
 
 const Profile = ({ onClose }) => {
   const [user, setUser] = useState(null);
@@ -23,8 +22,6 @@ const Profile = ({ onClose }) => {
     return <div>Loading...</div>; 
   }
 
-  const profilePictureUrl = user.profilePicture ? `http://localhost:5000/${user.profilePicture}` : defaultProfilePicture;
-
   return (
     <>
       <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50">
@@ -37,7 +34,7 @@ const Profile = ({ onClose }) => {
           </div>
           <div className="w-full flex justify-center mt-2">
             <img
-              src={profilePictureUrl}
+              src={user.profilePicture}
               alt="Profile"
               className="w-32 h-32 rounded-full border-2 border-black object-cover"
             />

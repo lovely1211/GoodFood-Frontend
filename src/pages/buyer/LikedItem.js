@@ -52,7 +52,7 @@ const LikedItems = () => {
         {likedItems.map((product, index) => (
           <div key={product._id || index} className="bg-white rounded-md p-3 mx-1 overflow-hidden relative">
             <img
-              src={`http://localhost:5000/uploads/${product.image}`}
+              src={product.image}
               alt={product.name}
               className="rounded-md w-full h-64 object-cover"
             />
